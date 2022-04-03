@@ -11,6 +11,16 @@ server.register(fastifyHttpProxy, {
     upstream: process.env.API_SERVICE,
     prefix: process.env.API_PREFIX,
 });
+server.register(fastifyHttpProxy, {
+    upstream: process.env.API_SERVICE,
+    prefix: "/uploads",
+    rewritePrefix: "/uploads",
+});
+server.register(fastifyHttpProxy, {
+    upstream: process.env.API_SERVICE,
+    prefix: "/favicon.ico",
+    rewritePrefix: "/favicon.ico",
+});
 
 // client
 server.register(fastifyHttpProxy, {
