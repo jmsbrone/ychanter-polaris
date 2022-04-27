@@ -1,7 +1,9 @@
 {
     "name": "yc_api_gateway",
+    "version": "1.0.0",
     "description": "API Gateway for YChanter system",
     "main": "dist/start.js",
+    "files": ["dist"],
     "license": "none",
     "dependencies": {
         "@types/nodemon": "^1.19.1",

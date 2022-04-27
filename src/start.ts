@@ -4,7 +4,10 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const server: FastifyInstance = Fastify({ logger: true });
+const server: FastifyInstance = Fastify({
+    logger: true,
+    bodyLimit: 100 * 1024 * 1024, // 100mb
+});
 console.log(process.env.API_PREFIX);
 // server
 server.register(fastifyHttpProxy, {
